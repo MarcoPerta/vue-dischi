@@ -1,12 +1,15 @@
 <template>
 
+  <div class="card py-2" style="width: 18rem;">
+
+    <img :src="Card.poster" class="card-img-top" alt="...">
     <div class="card-body">
-        <img :src="Card.poster" alt="">
-        <h5 class="card-title text-center">{{ Card.title }}</h5>
-        <p class="card-text text-center">{{ Card.author }}</p>
-        <p class="card-text text-center">{{ Card.year }}</p>
+      <h5 class="card-title text-white">{{ Card.title }}</h5>
+      <span class="card-text text-white">{{ Card.author }}</span> <br>
+      <span class="card-text text-white">{{ Card.year }}</span>
     </div>
 
+  </div>
 </template>
   
 <script>
@@ -21,17 +24,15 @@
   
 <style lang="scss">
 
+.card{
+        width: calc((100% / 5) - 10px) !important;
+        margin: 5px;
+        background-color: #2E3A46 !important;
+
         img{
-          width: 100%;
-          height: 100%;
+            width: 80%;
+            margin: auto;
         }
 
-        .card-title{
-          color: whitesmoke;
-        }
-
-        .card-text{
-          color: lightgray;
-        }
-    
+    }
 </style>
