@@ -2,7 +2,7 @@
   <div id="app">
     <HeaderComp/>
 
-    <MainComp/>
+    <MainComp @emitGeneri="methodEmitApp" :emit="methodEmitApp"/>
   </div>
 </template>
 
@@ -16,7 +16,17 @@ export default {
   components: {
     HeaderComp,
     MainComp
-  }
+  },
+  data() {
+        return {
+            arrayGeneri: []
+        }
+    },
+  methods:{
+    methodEmitApp(valoreEmit){
+      this.arrayGeneri=valoreEmit;
+    }
+  }  
   
 }
 </script>

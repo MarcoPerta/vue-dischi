@@ -19,7 +19,8 @@ export default {
     },
     data() {
         return {
-            albums: ''
+            albums: [],
+            arrayGeneri: []
         }
     },
     mounted() {
@@ -32,6 +33,13 @@ export default {
                     // console.log(response.data.response)
                     this.albums = response.data.response
                     // console.log(this.albums)
+                    this.albums.forEach((singoloAlbum) => {
+                        if(!this.arrayGeneri.includes(singoloAlbum.genre)){
+                            this.arrayGeneri.push(singoloAlbum.genre)
+                        }
+                    });
+
+                    this.$emit('emitGeneri',this.arrayGeneri)
                 })
         }
     }

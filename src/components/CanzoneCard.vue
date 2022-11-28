@@ -1,6 +1,6 @@
 <template>
 
-  <div class="card py-2" style="width: 18rem;">
+  <div class="card py-2">
 
     <img :src="Card.poster" class="card-img-top" alt="...">
     <div class="card-body">
@@ -25,7 +25,7 @@
 <style lang="scss">
 
 .card{
-        width: calc((100% / 5) - 10px) !important;
+        width: calc((100% / 5) - 10px);
         margin: 5px;
         background-color: #2E3A46 !important;
 

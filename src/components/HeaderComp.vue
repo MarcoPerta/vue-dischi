@@ -10,7 +10,7 @@
   
   export default {
     name: 'HeaderComp',
-    
+    props:["methodEmitApp"]
   }
   </script>
   
